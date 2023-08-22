@@ -14,10 +14,12 @@ while(num!=999):
     num=int(input("請輸入需要改的變數代號(0~4)，若無需變更請輸入999:"))
     if(num<5 and num>=0):
         print("需要改的變數:",data[parameter[num]])
-        new_value=int(input("請輸入"+parameter[num]+"新的值:"))
+        new_value=float(input("請輸入"+parameter[num]+"新的值:"))
         print(parameter[num],":",value[num],"->",new_value)
         data[parameter[num]]=new_value
         value[num]=new_value
+    elif(num==999):
+        break
     else:
         print("參數錯誤，請重新輸入")
 print("修改後參數如下:")
